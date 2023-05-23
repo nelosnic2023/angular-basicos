@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-listado',
@@ -6,16 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listado.component.css']
 })
 export class ListadoComponent {
-  heroes: string[] = ['Spiderman','Ironman','Hulk','Thor','Capitan America'];
+  public nombreHeroes: string[] = ['Spiderman','Ironman','Hulk','Thor','Capitan America'];
+  public heroeEliminado: string = '';
   //i : number = 0;
 
   heroeBorrado: string = '';
   estado:boolean = false;
+
+
   borrarHeroe(): void {
     // this.i = this.heroes.length - 1;
     // this.heroes.splice(this.i, 1);
 
-    this.heroeBorrado = this.heroes.shift() || '';    
-    this.estado = true;
+    this.heroeBorrado = this.nombreHeroes.pop() || '';
+
+
+    // this.heroeBorrado = this.nombreHeroes.shift() || '';
+    // this.estado = true;
   }
 }

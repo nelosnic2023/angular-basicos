@@ -14,10 +14,19 @@
     <dd>{{nombreCapitalizado}}</dd>
 </dl>
 
-<button (click)="cambiarNombre()">
+<button type="button"
+*ngIf="nombre !== 'Super Man'"
+(click)="cambiarNombre()"  class="btn btn-primary">
     Cambiar Héroe
 </button>
-
-<button (click)="cambiarEdad()">
+<!-- *ngIf="false"  destruye el boton. -->
+<button type="button"
+*ngIf="edad === 19"
+(click)="cambiarEdad()" class="btn btn-primary">
     Cambiar Edad
+</button>
+
+<button type="button"
+(click)="resetForm()" class="btn btn-primary">
+    reset formulario
 </button>
