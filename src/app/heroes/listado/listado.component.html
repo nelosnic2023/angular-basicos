@@ -1,9 +1,10 @@
 <h1>Hola Mundo</h1>
 <hr>
-<h3>Listado de Héroe</h3>
+<!-- <h3>Listado de Héroe</h3> -->
 <div *ngIf="heroeBorrado; else noBorrado">
-    <h3>Héroe Borrado <small class="text-danger">{{heroeBorrado}}</small></h3>
+    <h3>Héroe Borrado <small class="text-danger">{{ heroeBorrado }}</small></h3>
 
+    
 </div>
 <ng-template #noBorrado>
     <h3>No ha Borrado Nada</h3>

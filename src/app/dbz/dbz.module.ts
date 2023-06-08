@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-import { MainPageComponent } from './main-page/main-page.component';
-import { PersonajesComponent } from './personajes/personajes.component';
-import { AgregarComponent } from './agregar/agregar.component';
+import { MainPageComponent } from './pages/main-page.component'
+import { ListComponent } from './components/list/list.component';
 import { DbzService } from './services/dbz.service';
+import { AgregarPersonajeComponent } from './components/agregar-personaje/agregar-personaje.component';
 
 @NgModule({
   declarations: [
     MainPageComponent,
-    PersonajesComponent,
-    AgregarComponent
+    ListComponent,
+    AgregarPersonajeComponent
   ],
   exports:[
     MainPageComponent

@@ -1,0 +1,25 @@
+<h4>Lista</h4>
+<ul class="list-group">
+  <li *ngFor="let caracter of caracterLista;
+  let i = index;
+  let esPrimero = first;
+  let esUltimo = last;
+  let esImpar = even;
+  let esPar = odd;"
+  class="list-group-item d-flex
+  justify-content-between align-items-center"
+  [ngClass]="{
+    'list-group-item-dark': esPrimero,
+    'list-group-item-primary': esUltimo
+   }"
+  >
+    <div>
+      <span class="text-primary">{{i+1}}.</span>
+      <span> {{caracter.nombre}}</span>
+      <strong> - Poder:</strong>
+      <span> {{caracter.poder}}</span>
+    </div>
+    <button class="btn btn-danger"
+     (click)="onEliminarCaracter( caracter.id || '' )">X</button>
+  </li>
+</ul>
